@@ -1,11 +1,10 @@
 # Created by newuser for 5.4.2
 #
-#
 # History
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
-setopt SHARE_HISTORY
+unsetopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 bindkey "$key[Up]" history-search-backward
