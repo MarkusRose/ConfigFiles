@@ -20,21 +20,27 @@ set nocompatible
 set showcmd
 
 " allow search for ignorecase unless upper case letter in search term:
+set ignorecase
 set smartcase
+set incsearch
+set hlsearch
+
+" Activate the mouse
+"set mouse=a
 
 " get rid of arrow key problems
-nnoremap <Left> :echo "No left for you!"<CR>
-nnoremap <Right> :echo "No right for you!"<CR>
-nnoremap <Up> :echo "No up for you!"<CR>
-nnoremap <Down> :echo "No down for you!"<CR>
-vnoremap <Left> <nop>
-vnoremap <Right> <nop>
-vnoremap <Up> <nop>
-vnoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
+"nnoremap <Left> :echo "No left for you!"<CR>
+"nnoremap <Right> :echo "No right for you!"<CR>
+"nnoremap <Up> :echo "No up for you!"<CR>
+"nnoremap <Down> :echo "No down for you!"<CR>
+"vnoremap <Left> <nop>
+"vnoremap <Right> <nop>
+"vnoremap <Up> <nop>
+"vnoremap <Down> <nop>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
 
 "enable syntax and plugins
 syntax enable
@@ -55,7 +61,7 @@ set background=dark
 " Set text width marker
 set textwidth=0
 highlight ColorColumn ctermbg=65 guibg=#2c2d27
-set colorcolumn=80 
+set colorcolumn=120
 
 " Indentation 
 set tabstop=4
