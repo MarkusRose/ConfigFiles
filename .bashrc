@@ -169,3 +169,4 @@ unset __conda_setup
 # TMC autocomplete for University of Helsinki submission program
 #source /home/markus/.tmc-autocomplete.sh || true
 
+. "$HOME/.cargo/env"

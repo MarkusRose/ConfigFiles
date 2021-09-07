@@ -12,6 +12,33 @@
 " Folding:
 " za
 "
+"
+" BEWARE PLUGINS LIVE HERE:
+" =========================
+
+" VUNDLE INITIALIZATION:
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'preservim/nerdtree'
+Plugin 'itchyny/lightline.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'preservim/nerdcommenter'
+set noshowmode
+
+call vundle#end()
+filetype indent on
+filetype plugin on
+
+
+" CONFIGURATION AND CUSTOMIZATION:
+" ================================
 
 "enter the current millenium
 set nocompatible
@@ -26,7 +53,7 @@ set incsearch
 set hlsearch
 
 " Activate the mouse
-"set mouse=a
+set mouse=a
 
 " get rid of arrow key problems
 "nnoremap <Left> :echo "No left for you!"<CR>
@@ -43,7 +70,7 @@ set hlsearch
 "inoremap <Down> <nop>
 
 "enable syntax and plugins
-syntax enable
+syntax on
 filetype indent on
 filetype plugin on
 let python_highlight_all=1
@@ -55,13 +82,14 @@ set path+=**
 set wildmenu
 
 " Background color
-colorscheme desert
+set t_Co=256
 set background=dark
+colorscheme gruvbox
 
 " Set text width marker
 set textwidth=0
-highlight ColorColumn ctermbg=65 guibg=#2c2d27
-set colorcolumn=120
+set colorcolumn=80
+highlight ColorColumn guibg=#2c2d27 ctermbg=8
 
 " Indentation 
 set tabstop=4
@@ -76,7 +104,7 @@ set foldlevel=99
 
 " Line numbering and wrapping
 set nu
-set relativenumber
+"set relativenumber
 set whichwrap+=>,l
 set whichwrap+=<,h
 
@@ -139,26 +167,6 @@ au BufNewFile,BufRead *.js,*.html,*css setlocal tabstop=2 softtabstop=2 shiftwid
 au BufNewFile,BufRead *.tex setlocal spell tabstop=2 softtabstop=2 shiftwidth=2
 
 
-" BEWARE PLUGINS LIVE HERE:
-" =========================
-
-" VUNDLE INITIALIZATION:
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'preservim/nerdtree'
-"Plugin 'powerline/powerline'
-Plugin 'itchyny/lightline.vim'
-"Plugin 'vim-airline/vim-airline'
-set noshowmode
-
-call vundle#end()
-filetype indent on
-filetype plugin on
 
 " JEDI OPTIONS:
 let g:jedi#popup_on_dot=0  "Don't automatically start jedi on entering a '.'
