@@ -29,6 +29,7 @@ echo "======================================="
 alias vpn='/opt/cisco/anyconnect/bin/vpn'
 alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
 alias tmux='TERM=xterm-256color tmux'
+alias runelite='java -jar /usr/local/bin/RuneLite.jar'
 
 export EDITOR='/usr/bin/vim'
 
