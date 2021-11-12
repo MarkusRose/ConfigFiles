@@ -1,12 +1,3 @@
-" IMPORTANT COMMANDS FOR ME TO REMEMBER:
-" Findoccurance:
-" * #
-" Jumping: next "method" structure
-" ]m ]M [m [M
-" Splits:
-" maximize: ^W_   ^W|
-" fill width/height: ^WK ^WH
-" select first split: ^Wt
 " Tabbing:
 " :tabe to create and gt gT to switch
 " Folding:
@@ -26,10 +17,11 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'itchyny/lightline.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
+" Plugin 'vim-syntastic/syntastic'
+" Plugin 'nvie/vim-flake8'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'preservim/nerdcommenter'
+" Plugin 'mmai/vim-zenmode'
 set noshowmode
 
 call vundle#end()

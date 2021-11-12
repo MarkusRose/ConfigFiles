@@ -151,21 +151,6 @@ alias tmux='TERM=xterm-256color tmux'
 
 export EDITOR='/usr/bin/vim'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/markus/Apps/Anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/markus/Apps/Anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/markus/Apps/Anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/markus/Apps/Anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # TMC autocomplete for University of Helsinki submission program
 #source /home/markus/.tmc-autocomplete.sh || true
 
