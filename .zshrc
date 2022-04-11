@@ -8,6 +8,7 @@ unsetopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 bindkey "$key[Up]" history-search-backward
+bindkey "$key[Down]" history-search-forward
 
 setopt CORRECT
 #setopt CORRECT_ALL
@@ -23,19 +24,10 @@ RPROMPT='%*'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ls='ls --color=auto'
 
-fortune | cowsay
-echo "======================================="
-
-alias vpn='/opt/cisco/anyconnect/bin/vpn'
-alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
-alias tmux='TERM=xterm-256color tmux'
-alias runelite='java -jar /usr/local/bin/RuneLite.jar'
+#fortune | cowsay
+#echo "======================================="
 
 export EDITOR='/usr/bin/vim'
-
-# TMC autocomplete for University of Helsinki submission program
-#source /home/markus/.tmc-autocomplete.sh || true
-#source /home/markus/.tmc-autocomplete.sh || true
 
 # some more ls aliases
 alias ll='ls -alF'

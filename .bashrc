@@ -14,8 +14,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=10000
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -129,29 +129,23 @@ complete -o default -F _pip_completion pip
 #VIRTUAL_ENV_DISABLE_PROMPT=1 source /home/markus/Apps/EnthoughtCanopy/User/bin/activate
 
 # Look of the terminal
-prompt_cmd () {
-    LAST_STATUS=$?
-    if [[ $LAST_STATUS == 0 ]];then
-        PS1="\[\e[0;32m\]√\[\e[0m\]."
-    else
-        PS1="\[\e[0;31m\]$LAST_STATUS\[\e[0m\]."
-    fi
+#prompt_cmd () {
+    #LAST_STATUS=$?
+    #if [[ $LAST_STATUS == 0 ]];then
+        #PS1="\[\e[0;32m\]√\[\e[0m\]."
+    #else
+        #PS1="\[\e[0;31m\]$LAST_STATUS\[\e[0m\]."
+    #fi
 
-    MYPS1="\[\e[1;33m\][\A]\[\e[0m\] \[\e[0;34m\]\W\[\e[00m\] > "
-    PS1+=$MYPS1
-}
-export PROMPT_COMMAND=prompt_cmd
+    #MYPS1="\[\e[1;33m\][\A]\[\e[0m\] \[\e[0;34m\]\W\[\e[00m\] > "
+    #PS1+=$MYPS1
+#}
+#export PROMPT_COMMAND=prompt_cmd
 
 # fortune | cowsay
-echo "======================================="
+# echo "======================================="
 
-alias vpn='/opt/cisco/anyconnect/bin/vpn'
-alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
-alias tmux='TERM=xterm-256color tmux'
+# alias tmux='TERM=xterm-256color tmux'
 
 export EDITOR='/usr/bin/vim'
 
-# TMC autocomplete for University of Helsinki submission program
-#source /home/markus/.tmc-autocomplete.sh || true
-
-. "$HOME/.cargo/env"

@@ -77,6 +77,7 @@ set wildmenu
 set t_Co=256
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " Set text width marker
 set textwidth=0
