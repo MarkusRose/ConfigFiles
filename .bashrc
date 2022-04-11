@@ -149,4 +149,4 @@ complete -o default -F _pip_completion pip
 
 export EDITOR='/usr/bin/vim'
 
-LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:ow=1;4;33'
+LS_COLORS='ow=1;4;33'
