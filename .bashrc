@@ -150,3 +150,4 @@ complete -o default -F _pip_completion pip
 export EDITOR='/usr/bin/vim'
 
 LS_COLORS='ow=1;4;33'
+. "$HOME/.cargo/env"

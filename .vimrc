@@ -77,11 +77,11 @@ set wildmenu
 set t_Co=256
 set background=dark
 colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+" highlight Normal ctermbg=NONE
 
 " Set text width marker
 set textwidth=0
-set colorcolumn=80
+set colorcolumn=110
 highlight ColorColumn guibg=#2c2d27 ctermbg=8
 
 " Indentation 
@@ -146,8 +146,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " use z= to see corrections
 " use zg to add word to dictionary
 " use zw to mark word as wrong
-set spelllang=en_ca
-"set spell
+set spelllang=en_ca,de_de
 set nospell
 
 " FILE SPECIFIC SETTINGS:
@@ -165,3 +164,25 @@ au BufNewFile,BufRead *.tex setlocal spell tabstop=2 softtabstop=2 shiftwidth=2
 let g:jedi#popup_on_dot=0  "Don't automatically start jedi on entering a '.'
 let g:jedi#use_tabs_not_buffers = 1 "make jedi-vim use tabs when going to a definition
 autocmd FileType python setlocal completeopt-=preview
+
+" My custom functions
+let dark="dark"
+let light="light"
+let trans="transparent"
+let translight="transparent-light"
+function Btheme(name)
+    if a:name == "transparent"
+        set background=dark
+        highlight Normal ctermbg=NONE
+    elseif a:name == "dark"
+        set background=dark
+    elseif a:name == "light"
+        set background=light
+    elseif a:name == "transparent-light"
+        set background=light
+        highlight Normal ctermbg=NONE
+    else
+        echom "Option not defined."
+    endif
+endfunction
+command -nargs=1 Settheme :call Btheme(<args>)
