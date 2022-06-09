@@ -21,6 +21,7 @@ Plugin 'itchyny/lightline.vim'
 " Plugin 'nvie/vim-flake8'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'preservim/nerdcommenter'
+" Plugin 'ymatz/vim-latex-completion'
 " Plugin 'mmai/vim-zenmode'
 set noshowmode
 
