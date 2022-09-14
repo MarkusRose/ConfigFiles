@@ -22,6 +22,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'preservim/nerdcommenter'
 " Plugin 'mmai/vim-zenmode'
+Plugin 'vimwiki/vimwiki'
+Plugin 'pangloss/vim-javascript'
 set noshowmode
 
 call vundle#end()
@@ -154,7 +156,7 @@ set nospell
 au BufNewFile,BufRead *.py
     \set fileformat=unix
 " For JavaScript, HTML, CSS
-au BufNewFile,BufRead *.js,*.html,*css setlocal tabstop=2 softtabstop=2 shiftwidth=2 
+au BufNewFile,BufRead *.ts,*.js,*.html,*css setlocal tabstop=2 softtabstop=2 shiftwidth=2 
 " For LaTeX files:
 au BufNewFile,BufRead *.tex setlocal spell tabstop=2 softtabstop=2 shiftwidth=2
 
